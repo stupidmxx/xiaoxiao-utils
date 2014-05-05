@@ -1,0 +1,166 @@
+<!doctype html>
+
+<!--
+    This page is created based on impress.js (http://github.com/bartaz/impress.js). Thanks to the author bartaz 
+	very much!
+-->
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Jenkins Resource Monitor, and more...</title>
+    
+    <meta name="description" content="Show you what's the Jenkins Resource Monitor" />
+    <meta name="presenter" content="Xiaoxiao Mo" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/impress-demo.css" rel="stylesheet" />
+</head>
+
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+
+    <div id="start" class="step slide" data-x="-1000" data-y="-1500">
+        <q>Looking back to the moment before 4.0 Code Freeze</q>
+		<div class="jiong">那些年...</div>
+    </div>
+
+    <div class="step slide" data-x="0" data-y="-1500">
+        <q>Sound‘s playing back...</q>
+		<div class="jiong">
+		<div>回响在五楼的声音(注：不是作者的声音)</div>
+		</div>
+    </div>
+
+    <div class="step" data-x="0" data-y="0" data-scale="1">
+        <q>Who is touching my</q>
+        <h1><b>slave?!</b></h1>
+		<div class="jiong">谁动了我的奴隶（误）</div>
+    </div>
+
+    <div class="step" data-x="0" data-y="0" data-z="-5000" data-scale="1">
+        <span class="try">Not enough </span>
+        <h1>slaves!</h1>
+		<div class="jiong">试下回车，输入show me the money，回车</div>
+    </div>
+
+    <div class="step" data-x="0" data-y="0" data-z="-10000" data-scale="1">
+        <span class="try">My jobs had pended for </span>
+        <h1><i>3</i> hours!</h1>
+		<div class="jiong">你的哪个Jobs，Stephen Jobs吗？</div>
+    </div>
+
+    <div class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+        <q>In a word, we need to manage the slaves!</q>
+		<div class="jiong">起来，不愿做slave的server们</div>		
+    </div>
+
+    <div class="step" data-x="0" data-y="1500" data-scale="1">
+        <p>Jenkins Resource Monitor v0.618 comes with </p>
+		<q><b>one page</b> showing <b>who</b> is occupying <b>which</b> one for what <b>reason</b>.</q>
+		<div class="jiong">Mr.Monitor: Hello World</div>
+    </div>
+
+    <div class="step" data-x="0" data-y="3000" data-scale="1">
+        <p>It's a 1 man-hour proto-prototype by using Jenkins RESTFUL API.</p>
+		<img src="capture_1.jpg"/>
+		<div class="jiong">No html5, no css, a little bit js</div>
+    </div>
+
+    <div class="step" data-x="3500" data-y="4500" data-rotate="270" data-scale="4">
+        <q>Story <b>does not</b> end...</q>
+		<div class="jiong">领导：我最后只说三句</div>
+    </div>
+	
+    <div class="step" data-x="3500" data-y="1500" data-rotate="270" data-scale="4">
+	    <q>Continuous Improvement</q>
+		<ul>
+		  <li>Sort them by time</li>
+		  <li>One man one slave</li>
+		  <li>show me the labels</li>
+		</ul>
+		<div class="jiong">CI ?= Continuos Integration/Improvement/Inspection/In...</div>
+    </div>
+
+    <div class="step" data-x="3500" data-y="-1500" data-rotate="270" data-scale="4">
+        <p>Should be another 1 man-hour fast food, unfortunately there is no RESTFUL API of Labels available</p>
+		<span class="jiong">肿么办</span>
+    </div>
+    <div class="step" data-x="-1500" data-y="0" data-z="10000" data-rotate="180" data-scale="4">
+        <q><h1 style="font-size:144px">plug it in<h1></q>
+    </div>
+	
+    <div class="step" data-x="-1500" data-y="1500" data-z="10000" data-rotate="180" data-scale="4">
+        <p>4.5 hour passed...</p>
+		<ul>
+		  <li>1 hour for maven to download hpi from repository</li>
+		  <li>2.5 hours for copy/paste, editing and pre-integration-test</li>
+		  <li>1 hour for integration-test</li>
+		</ul>
+    </div>
+
+    <div class="step" data-x="-1500" data-y="4500" data-z="10000" data-rotate="180" data-scale="4">
+        <img src="Captuer_2.jpg"></img>
+    </div>
+
+    <div class="step" data-x="-1500" data-y="6000" data-z="10000" data-rotate="180" data-scale="4">
+        <p>More than Resource Monitor?</p>
+		<ul>
+		  <li>Resource usage rater</li>
+		  <li>Auto Notifier</li>
+		  <li>Auto labler</li>
+		  <li>...</li>
+		</ul>
+    </div>
+
+	<div class="step" data-x="7500" data-y="-1000" data-scale="4">
+        <p>Story <b style="font-size:72px"><i>seldom</i></b> ends...</p>
+		<div class="jiong">领导2:我再补充两句</div>
+    </div>
+
+    <div class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
+        <p style="margin-left:0;width:60%;margin-right:auto;">Want to make Jenkins more interesting?</p>
+        <p style="margin-left:auto;width:50%;margin-right:0;">Thursday 5:00pm, 5F ShangHai, Bridge team's sharing</span>
+		<div class="jiong">Shang Hai welcome ni</div>
+    </div>
+
+    <div class="step" data-x="6000" data-y="4000" data-scale="2">
+        <p>Story <b style="font-size:72px"><i>never</i></b> ends...</p>
+		<div class="jiong">领导3:我没啥好说的，就提一点</div>
+    </div>
+
+    <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+		<p><span class="have">Wanna know</span> <span class="you"> how to make </span> <span class="noticed">this presentation?</span></p>
+		<b class="imagination">- Github <a href="http://github.com/bartaz/impress.js">impress.js</a></b>
+    </div>
+
+    <div class="step" data-x="0" data-y="4300" data-z="-100" data-z="10000" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+		<h1>Q&A</h1>
+    </div>
+	
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>Jenkins Resource Coordinator</title>
+</head>
+<body>
+<div id="divResources"></div>
+<div id="divDownSlaves"></div>
+<div id="divIdleSlaves"></div>
+<script type="text/javascript">
+function onComputerDataLoaded(result, methodName)
+{
+var jenkinsUrl = 'http://ecnshxenlx0146.sh.cn.ao.ericsson.se:8080/';
+var computer=result.computer;
+var html = '<ul>';
+var downSlavesHtml = '<ul>';
+var idleSlavesHtml = '<ul>';
+for(var i = 0; i < computer.length; i++)
+{
+  if ( computer[i].temporarilyOffline ) {
+    var desc = computer[i].offlineCause.description;
+	var holder, cause;
+    if(desc) {
+      holder = desc.substring(16,23);
+	  cause = desc.substring(26);
+    } else {
+	  holder = 'Unkown';
+	  cause = 'Unkown';
+    }
+    html += '<li> Mr. <b><a href="' + jenkinsUrl + 'computer/' + computer[i].displayName + '">' + computer[i].displayName + '</a></b> is now offline by <b>' + holder + '</b>, "'+ cause +'"</li>';
+  } else if ( computer[i].offline ) {
+    downSlavesHtml += '<li> Mr. <b><a href="' + jenkinsUrl + 'computer/' + computer[i].displayName + '">' + computer[i].displayName + '</a></b> is down!!! Go and launch it!</li>';
+  } else if ( computer[i].idle ) {
+    idleSlavesHtml += '<li> Mr. <b><a href="' + jenkinsUrl + 'computer/' + computer[i].displayName + '">' + computer[i].displayName + '</a></b> is free. </li>';
+  }
+}
+html += '</ul>';
+downSlavesHtml += '</ul>';
+idleSlavesHtml += '</ul>';
+document.getElementById('divResources').innerHTML = html;
+document.getElementById('divDownSlaves').innerHTML = downSlavesHtml;
+document.getElementById('divIdleSlaves').innerHTML = idleSlavesHtml;
+}
+</script>
+<script type="text/javascript" src="http://ecnshxenlx0146.sh.cn.ao.ericsson.se:8080/computer/api/json?pretty=true&depth=2&jsonp=onComputerDataLoaded"></script>
+</body>
+</html>
+

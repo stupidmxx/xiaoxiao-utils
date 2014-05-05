@@ -4,3 +4,9 @@
 *.jar
 *.war
 *.ear
+
+# Linux temp files
+.*
+
+# White list of gitignore itself
+~.gitignore 

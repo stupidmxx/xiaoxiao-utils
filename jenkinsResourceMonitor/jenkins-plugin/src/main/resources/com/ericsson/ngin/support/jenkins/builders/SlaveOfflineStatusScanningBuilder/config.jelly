@@ -1,0 +1,9 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+
+   <!-- Checkbox: The 'field'-attribute specify which property that will be used. -->
+ 
+   <f:entry title="${%Generate csv report?}" field="generateCsv">
+       <f:checkbox default='true'/>
+   </f:entry> 
+
+</j:jelly>
